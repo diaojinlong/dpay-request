@@ -3,12 +3,12 @@
 
 
 # 安装
-
+```
 composer require diaojinlong/dpay-request
-
+```
 
 # 使用
-
+```
 <?php
 
 $config = [
@@ -43,6 +43,7 @@ $queryOrder = $dPay->queryOrders($outTradeNo);
 
 //支付单号查询订单
 $queryOrder = $dPay->queryOrders('', $prepayId);
+```
 
 
 
