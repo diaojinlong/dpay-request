@@ -43,6 +43,16 @@ $queryOrder = $dPay->queryOrders($outTradeNo);
 
 //支付单号查询订单
 $queryOrder = $dPay->queryOrders('', $prepayId);
+
+
+//验证服务端推送的数据
+$res = $dPay->validationPaySign($_POST);
+if($res === true){
+    echo '验证成功';
+}else{
+    echo '验证失败';
+}
+
 ```
 
 
