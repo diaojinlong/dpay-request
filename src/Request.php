@@ -195,8 +195,8 @@ class Request
     {
         $data = $this->unsetEmpty($data);
         ksort($data);
-        $url = urldecode(http_build_query($data));
-        return strtoupper(md5($url . $this->secret));
+        $str = join("", $data);
+        return md5($str . $this->secret);
     }
 
     /**
